@@ -16,3 +16,18 @@ function getComputerChoice() {
 
 // log what getComputerChoice does in the console
 console.log(getComputerChoice());
+
+// Create a function named getHumanChoice
+function getHumanChoice() {
+    let choice;
+    do {
+        choice = prompt("Rock, paper, scissors, shoot! Choose your action:");
+    }
+    // while the input is not "rock", "paper", or "scissors", continue prompt
+    while (choice !== "rock" && choice !== "paper" && choice !== "scissors");
+    return choice;
+}
+
+
+// log what getHumanChoice does in the console
+console.log(getHumanChoice());
