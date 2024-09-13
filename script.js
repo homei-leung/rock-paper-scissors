@@ -12,7 +12,7 @@ const roundUpdate = document.createElement("p");
 const scoreUpdate = document.createElement("p");
 const currentRound = document.createElement("p");
 const result = document.createElement("p");
-resultDiv.textContent = "Use the buttons to make a selection for playing rock, paper, scissors."
+resultDiv.textContent = "Use the buttons to make a selection for playing rock, paper, scissors. First player to 5 points wins."
 resultDiv.appendChild(roundUpdate);
 resultDiv.appendChild(scoreUpdate);
 resultDiv.appendChild(currentRound);
@@ -72,10 +72,10 @@ function playRound(humanChoice, computerChoice) {
 function trackRound() {
     rounds++;
 
-    currentRound.textContent = `Round ${rounds} out of 5`;
+    currentRound.textContent = `Round ${rounds}`;
 
-    // Determine winner of game on the last round
-    if (rounds === 5) {
+    // Determine winner of game
+    if (humanScore === 5 || computerScore === 5) {
         if (humanScore > computerScore) {
             result.textContent = "You won the game!";
         }else if (humanScore === computerScore) {
